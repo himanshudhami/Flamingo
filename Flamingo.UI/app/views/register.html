@@ -1,0 +1,13 @@
+<form name="register" class="form-signin" ng-submit="submit()">
+	<h1 class="form-signin-heading text-muted">Register</h1>
+	<input ng-model="firstname" type="text" class="form-control" placeholder="First Name" required autofocus="">
+	<input ng-model="lastname" type="text" class="form-control" placeholder="Last Name" required>		
+	<input ng-model="email" type="email" class="form-control" placeholder="Email address" required>
+		<p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Please enter a proper email.</p>
+	<input ng-model="password" name="password" type="password" class="form-control" placeholder="Password" required>
+	<input ng-model="password_confirm" name="password_confirm" type="password" class="form-control" placeholder="Confirm Password" validate-equals="password">
+		<p class="help-block" ng-show="register.password_confirm.$dirty && register.password_confirm.$invalid">Please Match the Passwords.</p>
+	<button class="btn btn-primary btn-block" ng-disabled="register.$invalid" type="submit">
+		Submit
+	</button>
+</form>

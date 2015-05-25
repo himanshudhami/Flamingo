@@ -1,0 +1,31 @@
+{
+  "name": "Flamingo.API",
+  "version": "0.0.0",
+  "description": "Flamingo Store Rest API",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sambaran Roy",
+  "license": "",
+  "dependencies": {
+    "express": "~4.12.4",
+    "body-parser": "~1.12.4",
+    "cookie-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "express-session": "~1.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "mongoose": "~3.8.1",
+    "passport": "~0.1.17",
+    "passport-local": "~0.1.6",
+    "connect-flash": "~0.1.1",
+    "jsonwebtoken": "~0.4.0",
+    "morgan": "~1.0.0",
+    "jwt-simple": "~0.3.0",
+    "moment": "~2.10.3",
+    "underscore": "~1.8.3",
+    "nodemailer": "~1.3.4",
+    "nodemailer-smtp-transport": "~1.0.3",
+    "nodemailer-wellknown": "~0.1.5"
+  }
+}
