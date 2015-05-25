@@ -25,6 +25,11 @@ angular
                 templateUrl: '/views/products.html',
                 controller: 'ProductsCtrl'
             })
+            .state('sales', {
+                url: '/sales',
+                templateUrl: '/views/sales.html',
+                controller: 'SalesCtrl'
+            })            
             .state('logout', {
                 url: '/logout',
                 controller: 'LogoutCtrl'

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	mongoUrl: 'mongodb://localhost/products',
+	mongoUrl: 'mongodb://localhost/sales',
 	amqp: {
     host: 'localhost',
     vhost: '/',

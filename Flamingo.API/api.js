@@ -7,6 +7,7 @@ var passport = require('passport');
 var createSendToken = require('./services/jwt.js');
 var localStrategy = require('./services/localStrategy.js');
 var products = require('./services/products.js');
+var sales = require('./services/sales.js');
 var emailVerification = require('./services/emailVerification.js');
 
 var app = express();
@@ -43,6 +44,12 @@ app.post('/login', passport.authenticate('local-login'), function (req, res) {
 });
 
 app.get('/products', products);
+
+app.get('/sales', sales.getSales);
+app.post('/sales', passport.authenticate('local-login'), function (req, res) {
+	var response = sales.postSales(req, res);
+	createSendToken(req.user, response);
+});
 
 mongoose.connect('mongodb://localhost/tokens');
 

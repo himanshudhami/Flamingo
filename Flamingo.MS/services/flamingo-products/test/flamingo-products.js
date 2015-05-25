@@ -1,12 +1,12 @@
 'use strict';
 
-var mongoose = require('mongoose'),FlamingoProduct;
+var mongoose = require('mongoose'), FlamingoProduct;
 var q = require('q');
 var _ = require('lodash');
 var db;
 
 module.exports.connect = function(){
-	mongoose.connect(config.mongo + '/' + config.mongoPath);
+	mongoose.connect(config.mongoUrl);
 	db = mongoose.connection;
 	db.on('error', console.error.bind(console, 'connection error:'));
 	var productSchema = mongoose.Schema({

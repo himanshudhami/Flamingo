@@ -1,0 +1,23 @@
+<div class="col-md-4">
+	<div class="panel panel-primary">
+		<div class="panel-heading" ng-click="collapse()">{{ product.name }}</div>
+		<div class="panel-body" ng-hide="collapsed">
+			<div ng-show="!!product.description">
+				<h5><strong>Description:</strong></h5>
+					{{ product.description}}	
+			</div>
+			<div ng-show="!!product.details">
+				<h5><strong>Product Details:</strong></h5>
+				<ul>
+					<li ng-repeat="detail in product.details">
+						<div ng-repeat="(key, value) in detail">
+				      {{key}} : {{value}}
+				    </div>
+					</li>
+				</ul>
+			</div>
+			<h5><strong>Price:  ${{ product.price }}</strong></h5>
+			<button class="btn btn-primary" ng-click="purchase(product)">Buy</button>
+		</div>
+	</div>	
+</div>

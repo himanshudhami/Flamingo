@@ -1,4 +1,7 @@
 var jwt = require('jwt-simple');
+var translator = require('./flamingoMSTranslator');
+var config = require('./config');
+var dispatcher = require('./amqpDispatcher');
 
 module.exports = function (req, res) {
 	var token = req.headers.authorization.split(' ')[1];
@@ -15,13 +18,10 @@ module.exports = function (req, res) {
 			message: 'You are not authorized'
 		});
 	}
-	res.json(products);
+	var path = config.flamingoMS.products.get;
+	var amqpRequest =  translator.getAmqpOptions(req, path, req.body);
+	var responsePromise = dispatcher.dispatch(amqpRequest, amqpRequest.body, res);
+  return responsePromise.then(function (result) {
+    return res.json(result);
+  });	
 };
-
-var products = [
-	'Journey Assist',
-	'Personalizer',
-	'Profiler',
-	'Analytics',
-	'Sovereign Personal Cloud'
-];
