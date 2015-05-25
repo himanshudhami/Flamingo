@@ -1,0 +1,43 @@
+{
+  "name": "flamingo-products",
+  "description": "Flamingo Products microservice",
+  "version": "1.0.0",
+  "author": "Sambaran Roy",
+  "dependencies": {
+    "amqp": "^0.1.8",
+    "lodash": "~2.3.0",
+    "node-uuid": "^1.4.1",
+    "q": "~0.9.7",
+    "mongodb": "~1.4.8",
+    "mongoose": "~3.8.14",
+    "redis": "~0.11.0",
+    "medseek-util-microservices": "0.0.9",
+    "minimist": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-mocha": "^1.1.0",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-util": "^3.0.1",
+    "mocha": "~1.21.3",
+    "chai": "~1.9.1",
+    "supertest": "~0.8.1",
+    "istanbul": "~0.1.44",
+    "jshint": "~2.3.0",
+    "nock": "~0.23.0",
+    "sinon": "~1.9.1",
+    "sinon-chai": "~2.4.0",
+    "proxyquire": "~0.5.1",
+    "chai-as-promised": "~4.1.0",
+    "nodemon": "~1.0.6",
+    "node-inspector": "~0.7.3"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": ">=0.10.21"
+  },
+  "scripts": {
+    "start": "node app",
+    "test": "node node_modules/gulp/bin/gulp.js test"
+  }
+}
