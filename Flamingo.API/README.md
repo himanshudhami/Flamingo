@@ -13,9 +13,7 @@ different OS, download the appropriate installer).  This will install the Node.j
 the Node Package Manager (npm).
 * [Git](http://git-scm.com/downloads) - distributed version control system (DVCS) - download and install the Git client for
 Windows (if using a different OS, download the appropriate installer).
-* [GitHub](https://github.com/) - MEDSEEK currently uses GitHub to manage the _Flamingo API_ source code.  GitHub is a hosted
-SCM solution and it requires an authenticated account.  You may use your own personal GitHub account or create a MEDSEEK
-account.  Once you have an account, an engineering manager can add the account to the _Flamingo API_ GitHub repository.
+* [GitHub](https://github.com/) - This project currently uses GitHub to manage the _Flamingo API_ source code.  GitHub is a hosted SCM solution and it requires an authenticated account.  You may use your own personal GitHub account. Once you have an account, an engineering manager can add the account to the _Flamingo API_ GitHub repository.
 * IDE / Editor - see the [IDE / Editor section](#ide) below.
 
 <a name="ide"/>
