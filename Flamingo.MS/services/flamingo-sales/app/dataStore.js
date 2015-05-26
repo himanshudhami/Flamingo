@@ -11,11 +11,47 @@ module.exports.connect = function(){
 	var salesSchema = mongo.Schema({
 		id: Number,		
 		productId: Number,
-		userId: Number,
+		userId: String,
 		quantity: Number,
 		salesDate: { type: Date, default: Date.now }
 	});
 	Sale = mongo.model('Sale', salesSchema);
+	var ipadSale = new Sale({
+		id: 1,
+		productId: 1,
+		userId: 'sambaranr@gmail.com',
+		quantity: 1
+	});
+	ipadSale.save(function (err, newSale){
+		if(err){
+			console.log(err);
+		} else
+			console.log(newSale.id);
+	});
+	var ipadSale2 = new Sale({
+		id: 2,
+		productId: 2,
+		userId: 'sambaranr@gmail.com',
+		quantity: 3
+	});
+	ipadSale2.save(function (err, newSale){
+		if(err){
+			console.log(err);
+		} else
+			console.log(newSale.id);
+	});
+	var ipadSale3 = new Sale({
+		id: 3,
+		productId: 3,
+		userId: 'sambaranr@gmail.com',
+		quantity: 2
+	});
+	ipadSale3.save(function (err, newSale){
+		if(err){
+			console.log(err);
+		} else
+			console.log(newSale.id);
+	});		
 };
 
 module.exports.save = function(sale){
