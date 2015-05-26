@@ -15,7 +15,7 @@ module.exports.connect = function(){
 		details: Object,
 		price: Number
 	});
-	Product = mongo.model('Sale', productsSchema);	
+	Product = mongo.model('Product', productsSchema);	
 };
 
 module.exports.save = function(product){
